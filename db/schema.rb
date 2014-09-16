@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140916051937) do
+ActiveRecord::Schema.define(version: 20140916153450) do
+
+  create_table "outlines", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "points", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "rank"
+    t.integer  "point_id"
+    t.integer  "outline_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tokens", force: true do |t|
     t.integer  "user_id"
