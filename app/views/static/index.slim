@@ -1,6 +1,11 @@
 h1
   | hi mike
 
-= form_for User.new do |f|
-  = f.text_field :email
-  = f.submit
+- if current_user
+  h2
+    | you logged in
+    = link_to 'sign out', '/sign_out'
+- else
+  = form_for User.new do |f|
+    = f.text_field :email
+    = f.submit
