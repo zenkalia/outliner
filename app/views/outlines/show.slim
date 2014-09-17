@@ -1,0 +1,7 @@
+h2 = "Title: #{@outline.title}"
+ol
+  - @outline.points.each do |point|
+    li = render partial: 'points/form', locals: { point: point }
+= form_for Point.new, html: { remote: true, data: { type: :html } } do |f|
+  = f.hidden_field :outline_id, value: @outline.id
+  = f.submit 'Add'

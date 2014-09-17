@@ -2,4 +2,5 @@ h2
   | list those outlines
 ul
   - @outlines.each do |outline|
-    li = outline.title
+    li
+      = link_to outline.title, outline

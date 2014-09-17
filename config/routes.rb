@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :tokens
   resources :outlines
+  resources :points
   get '/sign_out' => 'users#sign_out'
 
   # Example of regular route:

@@ -8,5 +8,6 @@ html
     = csrf_meta_tags
     link href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet'
   body
-    h1 = "Hey #{current_user.try(:email) || 'Buddy'}"
-    = yield
+    .container
+      h1 = "Hey #{current_user.try(:email) || 'Buddy'}"
+      = yield
