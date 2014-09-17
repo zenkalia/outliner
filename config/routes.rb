@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'static#index'
   resources :users
   resources :tokens
+  resources :outlines
   get '/sign_out' => 'users#sign_out'
 
   # Example of regular route:
